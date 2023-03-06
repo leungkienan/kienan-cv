@@ -14,9 +14,16 @@ import {
 export default function Contact() {
   return (
     <>
-      <Nav />
-      <Container>
-        <Card margin="15px auto" align="center" boxShadow={'0 1px 8px #a7a7a7'}>
+      <Container maxW={'4xl'}>
+        <Card
+          // direction={{ base: 'column', sm: 'row' }}
+          overflow="hidden"
+          variant="outline"
+          margin="15px auto"
+          align="left"
+          // boxShadow={'0 1px 8px #a7a7a7'}
+          border={'none'}
+        >
           <CardHeader>
             <Heading size="2xl">Contact</Heading>
           </CardHeader>

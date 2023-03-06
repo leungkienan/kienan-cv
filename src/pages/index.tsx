@@ -1,7 +1,7 @@
 import Head from 'next/head'
+import NextLink from 'next/link'
 import { Inter } from 'next/font/google'
 import { Box, Link } from '@chakra-ui/react'
-import NextLink from 'next/link'
 import { AspectRatio, Container, Text } from '@chakra-ui/react'
 import { Center, Square, Circle } from '@chakra-ui/react'
 import { Flex, Spacer } from '@chakra-ui/react'
@@ -23,12 +23,9 @@ import {
   UnorderedList,
 } from '@chakra-ui/react'
 import { Grid, GridItem } from '@chakra-ui/react'
-
 import { InfoIcon } from '@chakra-ui/icons'
-
 import { IconButton } from '@chakra-ui/react'
-
-import Nav from './Nav'
+import HomePage from './Home'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -42,8 +39,8 @@ export default function Home() {
         <title>Kienan Leung CV</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <Container maxW="4xl">
+      <HomePage />
+      {/* <Container maxW="4xl">
         <Card
           direction={{ base: 'column', sm: 'row' }}
           overflow="hidden"
@@ -73,20 +70,7 @@ export default function Home() {
             />
           </CardBody>
         </Card>
-
-        {/* <Card margin="15px auto" align="center" boxShadow={'0 1px 8px #a7a7a7'}>
-          <CardHeader>
-            <Heading>About me</Heading>
-          </CardHeader>
-          <CardBody textAlign={'left'}>
-            <UnorderedList>
-              <ListItem>I make things with funny words</ListItem>
-              <ListItem>I sometimes take cool photos</ListItem>
-              <ListItem>I w</ListItem>
-            </UnorderedList>
-          </CardBody>
-        </Card> */}
-      </Container>
+      </Container> */}
     </>
   )
 }
