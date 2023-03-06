@@ -40,37 +40,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomePage />
-      {/* <Container maxW="4xl">
-        <Card
-          direction={{ base: 'column', sm: 'row' }}
-          overflow="hidden"
-          variant="outline"
-          margin="15px auto"
-          align="left"
-          // boxShadow={'0 1px 8px #a7a7a7'}
-          border={'none'}
-        >
-          <CardHeader>
-            <Heading size="4xl">Kienan Leung</Heading>
-            <Heading size="2xl">Me:</Heading>
-            <Heading size="2xl">Web Developer</Heading>
-            <Heading size="2xl">An Accountant</Heading>
-            <Heading size="2xl"></Heading>
-          </CardHeader>
-          <CardBody align={'right'}>
-            <Image
-              align="center"
-              src="/kienan.jpg"
-              alt="kienan"
-              width="400"
-              height="auto"
-              boxSize={'350px'}
-              borderRadius="full"
-              fit="cover"
-            />
-          </CardBody>
-        </Card>
-      </Container> */}
     </>
   )
+}
+
+{
+  /* <Container maxW="4xl">
+  <Card
+    direction={{ base: 'column', sm: 'row' }}
+    overflow="hidden"
+    variant="outline"
+    margin="15px auto"
+    align="left"
+    // boxShadow={'0 1px 8px #a7a7a7'}
+    border={'none'}
+  >
+    <CardHeader>
+      <Heading size="4xl">Kienan Leung</Heading>
+      <Heading size="2xl">Me:</Heading>
+      <Heading size="2xl">Web Developer</Heading>
+      <Heading size="2xl">An Accountant</Heading>
+      <Heading size="2xl"></Heading>
+    </CardHeader>
+    <CardBody align={'right'}>
+      <Image
+        align="center"
+        src="/kienan.jpg"
+        alt="kienan"
+        width="400"
+        height="auto"
+        boxSize={'350px'}
+        borderRadius="full"
+        fit="cover"
+      />
+    </CardBody>
+  </Card>
+</Container> */
 }

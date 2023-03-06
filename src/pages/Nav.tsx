@@ -15,8 +15,11 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack,
+  useColorMode,
+  Center,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 
 const Links = ['Projects', 'Gallery', 'Contact']
 
@@ -29,13 +32,14 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href={'#'}
+    href={'/' + children}
   >
     {children}
   </Link>
 )
 
 export default function Nav() {
+  const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -66,23 +70,11 @@ export default function Nav() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Menu>
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}
-              >
-                <Avatar size={'sm'} src={'./kienan.jpg'} />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
+            <Stack direction="row" spacing={'7'}>
+              <Button onClick={toggleColorMode}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </Button>
+            </Stack>
           </Flex>
         </Flex>
 
