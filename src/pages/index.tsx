@@ -22,6 +22,7 @@ import {
   OrderedList,
   UnorderedList,
 } from '@chakra-ui/react'
+import { Grid, GridItem } from '@chakra-ui/react'
 
 import { InfoIcon } from '@chakra-ui/icons'
 
@@ -42,52 +43,50 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav />
-      <Card
-        width="60%"
-        margin="15px auto"
-        align="center"
-        boxShadow={'0 1px 8px #a7a7a7'}
-      >
-        <CardHeader>
-          <Heading size="2xl" textAlign={'center'}>
-            This is Kienan
-          </Heading>
-        </CardHeader>
-        <CardBody textAlign="center">
-          <Center>
+      <Container maxW="4xl">
+        <Card
+          direction={{ base: 'column', sm: 'row' }}
+          overflow="hidden"
+          variant="outline"
+          margin="15px auto"
+          align="left"
+          // boxShadow={'0 1px 8px #a7a7a7'}
+          border={'none'}
+        >
+          <CardHeader>
+            <Heading size="4xl">Kienan Leung</Heading>
+            <Heading size="2xl">Me:</Heading>
+            <Heading size="2xl">Web Developer</Heading>
+            <Heading size="2xl">An Accountant</Heading>
+            <Heading size="2xl"></Heading>
+          </CardHeader>
+          <CardBody align={'right'}>
             <Image
               align="center"
               src="/kienan.jpg"
-              className="myself"
               alt="kienan"
-              width="400px"
+              width="400"
               height="auto"
-              boxSize={'200px'}
+              boxSize={'350px'}
               borderRadius="full"
               fit="cover"
             />
-          </Center>
-          <br></br>
-          <Heading size="xl">Accountant & Web Developer</Heading>
-          <br></br>
-        </CardBody>
-      </Card>
-      <Card
-        width="60%"
-        margin="15px auto"
-        align="center"
-        boxShadow={'0 1px 8px #a7a7a7'}
-      >
-        <CardHeader>
-          <Heading>About me</Heading>
-        </CardHeader>
-        <CardBody textAlign={'left'}>
-          <UnorderedList>
-            <ListItem>I love making things with funny words</ListItem>
-            <ListItem>I sometimes take cool photos</ListItem>
-          </UnorderedList>
-        </CardBody>
-      </Card>
+          </CardBody>
+        </Card>
+
+        {/* <Card margin="15px auto" align="center" boxShadow={'0 1px 8px #a7a7a7'}>
+          <CardHeader>
+            <Heading>About me</Heading>
+          </CardHeader>
+          <CardBody textAlign={'left'}>
+            <UnorderedList>
+              <ListItem>I make things with funny words</ListItem>
+              <ListItem>I sometimes take cool photos</ListItem>
+              <ListItem>I w</ListItem>
+            </UnorderedList>
+          </CardBody>
+        </Card> */}
+      </Container>
     </>
   )
 }
