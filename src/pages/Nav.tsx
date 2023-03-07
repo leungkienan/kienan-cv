@@ -56,7 +56,7 @@ export default function Nav() {
           <HStack spacing={8} alignItems={'center'}>
             <Box>
               <Button as={'a'} href="/">
-                My Logo
+                Home
               </Button>
             </Box>
             <HStack

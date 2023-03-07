@@ -16,12 +16,10 @@ export default function Contact() {
     <>
       <Container maxW={'4xl'}>
         <Card
-          // direction={{ base: 'column', sm: 'row' }}
           overflow="hidden"
           variant="outline"
           margin="15px auto"
           align="left"
-          // boxShadow={'0 1px 8px #a7a7a7'}
           border={'none'}
         >
           <CardHeader>
