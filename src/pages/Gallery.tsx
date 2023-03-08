@@ -1,17 +1,12 @@
 import { ReactElement } from 'react'
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react'
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc'
-import { fs } from 'fs'
 
 interface FeatureProps {
   title: string
   icon: ReactElement
 }
 const galleryFolder = '../../public/gallery'
-
-// fs.readdirSync(galleryFolder).forEach((file: any) => {
-//   console.log(file)
-// })
 
 const Feature = ({ title, icon }: FeatureProps) => {
   return (
