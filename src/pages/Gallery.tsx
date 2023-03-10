@@ -1,5 +1,13 @@
 import { ReactElement } from 'react'
-import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react'
+import {
+  Box,
+  SimpleGrid,
+  Icon,
+  Text,
+  Stack,
+  Flex,
+  Image,
+} from '@chakra-ui/react'
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc'
 
 interface FeatureProps {
