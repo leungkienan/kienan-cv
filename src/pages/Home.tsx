@@ -5,19 +5,14 @@ import {
   Box,
   Heading,
   Text,
-  Button,
   Image,
   Icon,
-  IconButton,
-  createIcon,
   IconProps,
-  useColorModeValue,
-  useBreakpointValue,
 } from '@chakra-ui/react'
 
 export default function HomePage() {
   return (
-    <Container maxW={'7xl'} px={'15%'}>
+    <Container maxW={'7xl'}>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -65,23 +60,12 @@ export default function HomePage() {
         >
           <Box
             position={'relative'}
-            height={'300px'}
+            height={'400px'}
             rounded={'2xl'}
             boxShadow={'2xl'}
             width={'full'}
             overflow={'hidden'}
           >
-            <IconButton
-              aria-label={'Play Button'}
-              variant={'ghost'}
-              _hover={{ bg: 'transparent' }}
-              size={'lg'}
-              color={'white'}
-              position={'absolute'}
-              left={'50%'}
-              top={'50%'}
-              transform={'translateX(-50%) translateY(-50%)'}
-            />
             <Image
               alt={'Hero Image'}
               fit={'cover'}

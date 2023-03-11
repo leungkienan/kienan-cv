@@ -46,7 +46,7 @@ export default function Gallery() {
   }
   return (
     <Box p={4}>
-      <Heading align="center" p="4" display="flex">
+      <Heading alignItems="center" p="4" display="flex">
         <Center m="auto" p="5">
           <Icon p="1" as={BsFillCameraFill} alignItems="center"></Icon>
           <Text>Olympus XA</Text>
@@ -54,7 +54,11 @@ export default function Gallery() {
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5}>
         {imgGallery.map((fileName) => (
-          <Image src={'./gallery/' + fileName + '.jpg'}></Image>
+          <Image
+            key={fileName}
+            src={'./gallery/' + fileName + '.jpg'}
+            alt="ok"
+          ></Image>
         ))}
       </SimpleGrid>
     </Box>
