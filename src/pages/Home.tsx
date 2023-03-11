@@ -17,7 +17,7 @@ import {
 
 export default function HomePage() {
   return (
-    <Container maxW={'5xl'}>
+    <Container maxW={'7xl'} px={'15%'}>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}

@@ -3,18 +3,21 @@ import {
   Box,
   SimpleGrid,
   Icon,
+  Heading,
   Text,
   Stack,
   Flex,
   Image,
+  Center,
 } from '@chakra-ui/react'
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc'
 
+import { BsFillCameraFill } from 'react-icons/bs'
+
+const filePath = '../../../public/gallery'
 interface FeatureProps {
   title: string
   icon: ReactElement
 }
-const galleryFolder = '../../public/gallery'
 
 const Feature = ({ title, icon }: FeatureProps) => {
   return (
@@ -37,13 +40,22 @@ const Feature = ({ title, icon }: FeatureProps) => {
 }
 
 export default function Gallery() {
+  const imgGallery = []
+  for (let i = 0; i <= 8; i++) {
+    imgGallery.push(i)
+  }
   return (
     <Box p={4}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-        <Feature
-          icon={<Icon as={FcInTransit} w={10} h={10} />}
-          title={'Instant Delivery'}
-        />
+      <Heading align="center" p="4" display="flex">
+        <Center m="auto" p="5">
+          <Icon p="1" as={BsFillCameraFill} alignItems="center"></Icon>
+          <Text>Olympus XA</Text>
+        </Center>
+      </Heading>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5}>
+        {imgGallery.map((fileName) => (
+          <Image src={'./gallery/' + fileName + '.jpg'}></Image>
+        ))}
       </SimpleGrid>
     </Box>
   )
