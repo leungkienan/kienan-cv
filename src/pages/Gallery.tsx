@@ -10,34 +10,7 @@ import {
   Image,
   Center,
 } from '@chakra-ui/react'
-
 import { BsFillCameraFill } from 'react-icons/bs'
-
-const filePath = '../../../public/gallery'
-interface FeatureProps {
-  title: string
-  icon: ReactElement
-}
-
-const Feature = ({ title, icon }: FeatureProps) => {
-  return (
-    <Stack>
-      <Flex
-        w={300}
-        h={300}
-        align={'center'}
-        justify={'center'}
-        color={'white'}
-        borderRadius={'5px'}
-        bg={'#fff'}
-        mb={1}
-      >
-        {icon}
-      </Flex>
-      <Text fontWeight={600}>{title}</Text>
-    </Stack>
-  )
-}
 
 export default function Gallery() {
   const imgGallery = []
