@@ -10,20 +10,23 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
+  textDecoration,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
+// import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 
 const Links = ['Projects', 'Gallery', 'Contact']
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
+    color="white"
+    fontWeight="bold"
     px={2}
     py={1}
     rounded={'md'}
     _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
+      textDecoration: 'underline',
+      bg: useColorModeValue('rgba(255, 255, 255, 0.1)', 'none'),
     }}
     href={'/' + children}
   >
@@ -32,12 +35,11 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 )
 
 export default function Nav() {
-  const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={'15%'}>
+      <Box bg={useColorModeValue('#880000', '#880000')} px={'8'}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -48,8 +50,19 @@ export default function Nav() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Box>
-              <Button as={'a'} href="/">
-                Home
+              <Button
+                className="home"
+                color="white"
+                bg={'#880000'}
+                fontWeight={'bold'}
+                as={'a'}
+                href="/"
+                _hover={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  textDecoration: 'underline',
+                }}
+              >
+                Kienan.dev
               </Button>
             </Box>
             <HStack
@@ -63,11 +76,7 @@ export default function Nav() {
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-            <Stack direction="row" spacing={'7'}>
-              <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
-            </Stack>
+            <Stack direction="row" spacing={'7'}></Stack>
           </Flex>
         </Flex>
 

@@ -4,11 +4,15 @@ import {
   Flex,
   Box,
   Heading,
+  Link,
   Text,
   Image,
   Icon,
+  IconButton,
   IconProps,
 } from '@chakra-ui/react'
+
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
 export default function HomePage() {
   return (
@@ -16,7 +20,7 @@ export default function HomePage() {
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        py={{ base: 5, md: 14 }}
         direction={{ base: 'column', md: 'row' }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
@@ -28,6 +32,7 @@ export default function HomePage() {
             <Text
               as={'span'}
               position={'relative'}
+              m="auto"
               _after={{
                 content: "''",
                 width: 'full',
@@ -43,12 +48,28 @@ export default function HomePage() {
             <br />
           </Heading>
           <div>
-            <Text color={'gray.500'}>My name is Kienan Leung, I am:</Text>
-            <Text color={'gray.500'}>A 25 Year Old Fullstack Developer </Text>
-            <Text color={'gray.500'}>
+            <Text color={'gray.900'}>My name is Kienan Leung, I am:</Text>
+            <Text color={'gray.900'}>A 25 Year Old Fullstack Developer </Text>
+            <Text color={'gray.900'}>
               Working as an Accountant at Redshift Ltd
             </Text>
-            <Text color={'gray.500'}>Cheers, have a browse</Text>
+            <Text color={'gray.900'}>Reach out to me here</Text>
+            <Link href="https://github.com/leungkienan" isExternal>
+              <Icon
+                aria-label="Open GitHub"
+                bg="none"
+                boxSize={'10'}
+                as={AiFillGithub}
+              ></Icon>
+            </Link>
+            <Link href="https://www.linkedin.com/in/kienan-leung" isExternal>
+              <Icon
+                aria-label="Open LinkedIn"
+                bg="none"
+                boxSize={'10'}
+                as={AiFillLinkedin}
+              ></Icon>
+            </Link>
           </div>
         </Stack>
         <Flex
