@@ -1,5 +1,6 @@
 import {
   Container,
+  Center,
   Stack,
   Flex,
   Box,
@@ -16,7 +17,7 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
 export default function HomePage() {
   return (
-    <Container maxW={'7xl'}>
+    <Container maxW={'7xl'} height="80vh">
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -48,13 +49,16 @@ export default function HomePage() {
             <br />
           </Heading>
           <div>
-            <Text color={'gray.900'}>My name is Kienan Leung, I am:</Text>
+            <Text justifyContent={'center'} color={'gray.900'}>
+              My name is Kienan Leung, I am:
+            </Text>
             <Text color={'gray.900'}>A 25 Year Old Fullstack Developer </Text>
             <Text color={'gray.900'}>
               Working as an Accountant at Redshift Ltd
             </Text>
-            <Text color={'gray.900'}>Reach out to me here</Text>
-            <Link href="https://github.com/leungkienan" isExternal>
+          </div>
+          <Box>
+            <Link px={2} href="https://github.com/leungkienan" isExternal>
               <Icon
                 aria-label="Open GitHub"
                 bg="none"
@@ -62,7 +66,11 @@ export default function HomePage() {
                 as={AiFillGithub}
               ></Icon>
             </Link>
-            <Link href="https://www.linkedin.com/in/kienan-leung" isExternal>
+            <Link
+              px={2}
+              href="https://www.linkedin.com/in/kienan-leung"
+              isExternal
+            >
               <Icon
                 aria-label="Open LinkedIn"
                 bg="none"
@@ -70,7 +78,7 @@ export default function HomePage() {
                 as={AiFillLinkedin}
               ></Icon>
             </Link>
-          </div>
+          </Box>
         </Stack>
         <Flex
           flex={1}

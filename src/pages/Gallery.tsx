@@ -18,7 +18,7 @@ export default function Gallery() {
     imgGallery.push(i)
   }
   return (
-    <Box p={4}>
+    <Box p={4} height="80vh">
       <Heading alignItems="center" p="4" display="flex">
         <Center m="auto" p="5">
           <Icon p="1" as={BsFillCameraFill} alignItems="center"></Icon>
@@ -28,6 +28,8 @@ export default function Gallery() {
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5}>
         {imgGallery.map((fileName) => (
           <Image
+            borderRadius={'10px'}
+            // border={'solid'}
             key={fileName}
             src={'./gallery/' + fileName + '.jpg'}
             alt="ok"

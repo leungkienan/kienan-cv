@@ -1,9 +1,11 @@
 import Nav from './Nav'
+import { ReactNode } from 'react'
 import {
   Card,
   CardHeader,
   CardBody,
   CardFooter,
+  Box,
   Button,
   Heading,
   Image,
@@ -11,21 +13,24 @@ import {
   Container,
 } from '@chakra-ui/react'
 
-const projectList = {
-  aniScraper: {
-    name: 'aniScraper',
-    desc: 'A tool to download the anime you only want to see',
-  },
-  manglist: {
-    name: 'MangList',
-    desc: 'Update and track my manga chapters as I read them.',
-  },
-}
+const projectList = [
+  { name: 'Cotiss Project', desc: 'hi', link: '' },
+  { name: 'AniScraper', desc: 'sup', link: '' },
+  { name: 'MangList', desc: 'this is a test', link: '' },
+]
+
+const Proj = ({ children }: { children: ReactNode }) => (
+  <Box>
+    <Heading>{children.name}</Heading>
+    <Text>{children.desc}</Text>
+    <Text>{children.link}</Text>
+  </Box>
+)
 
 export default function Projects() {
   return (
     <>
-      <Container maxW={'4xl'}>
+      <Container maxW={'4xl'} height="80vh">
         <Card
           overflow="hidden"
           variant="outline"
@@ -37,8 +42,9 @@ export default function Projects() {
             <Heading size="2xl">Projects</Heading>
           </CardHeader>
           <CardBody textAlign="left">
-            <Heading size="0.5xl">{projectList.aniScraper.name}</Heading>
-            <Text>{projectList.aniScraper.desc}</Text>
+            {projectList.map((stuff) => (
+              <Proj>{stuff}</Proj>
+            ))}
           </CardBody>
         </Card>
       </Container>

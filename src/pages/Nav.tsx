@@ -13,7 +13,6 @@ import {
   textDecoration,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
-// import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 
 const Links = ['Projects', 'Gallery', 'Contact']
 
@@ -39,7 +38,7 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('#880000', '#880000')} px={'8'}>
+      <Box bg={useColorModeValue('#880000', '#880000')}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
