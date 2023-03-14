@@ -18,7 +18,7 @@ export default function Gallery() {
     imgGallery.push(i)
   }
   return (
-    <Box p={4} height="80vh">
+    <Box p={4} height="100vh">
       <Heading alignItems="center" p="4" display="flex">
         <Center m="auto" p="5">
           <Icon p="1" as={BsFillCameraFill} alignItems="center"></Icon>

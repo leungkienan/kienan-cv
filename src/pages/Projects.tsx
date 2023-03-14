@@ -30,7 +30,7 @@ const Proj = ({ children }: { children: ReactNode }) => (
 export default function Projects() {
   return (
     <>
-      <Container maxW={'4xl'} height="80vh">
+      <Container maxW={'4xl'} height="100vh">
         <Card
           overflow="hidden"
           variant="outline"

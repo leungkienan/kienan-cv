@@ -8,8 +8,10 @@ import {
   Button,
   useDisclosure,
   useColorModeValue,
+  Image,
   Stack,
   useColorMode,
+  Text,
   textDecoration,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
@@ -38,7 +40,7 @@ export default function Nav() {
 
   return (
     <>
-      <Box bg={useColorModeValue('#880000', '#880000')}>
+      <Box bg={useColorModeValue('#880000', '#880000')} px="4">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
@@ -61,7 +63,8 @@ export default function Nav() {
                   textDecoration: 'underline',
                 }}
               >
-                Kienan.dev
+                <Image src="kl small logo clear.png" w="8"></Image>
+                <Text ml="2">Kienan Leung</Text>
               </Button>
             </Box>
             <HStack
@@ -69,14 +72,15 @@ export default function Nav() {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}
             >
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <Flex alignItems={'center'}>
+                <Stack direction="row" spacing={'7'}>
+                  {Links.map((link) => (
+                    <NavLink key={link}>{link}</NavLink>
+                  ))}
+                </Stack>
+              </Flex>
             </HStack>
           </HStack>
-          <Flex alignItems={'center'}>
-            <Stack direction="row" spacing={'7'}></Stack>
-          </Flex>
         </Flex>
 
         {isOpen ? (

@@ -17,7 +17,7 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
 export default function HomePage() {
   return (
-    <Container maxW={'7xl'} height="80vh">
+    <Container maxW={'7xl'} h="100vh">
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}

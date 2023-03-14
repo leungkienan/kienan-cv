@@ -2,7 +2,7 @@ import { Container, Stack, Heading, Text } from '@chakra-ui/react'
 
 export default function Contact() {
   return (
-    <Container maxW={'7xl'} px={'15%'} height="80vh">
+    <Container maxW={'7xl'} px={'15%'} height="100vh">
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}

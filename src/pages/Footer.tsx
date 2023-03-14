@@ -5,6 +5,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  Image,
   VisuallyHidden,
 } from '@chakra-ui/react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
@@ -12,12 +13,13 @@ import { ReactNode } from 'react'
 
 const Logo = (props: any) => {
   return (
-    <svg
-      height={32}
-      viewBox="0 0 120 28"
-      xmlns="./favicon.ico"
-      {...props}
-    ></svg>
+    // <svg
+    //   height={32}
+    //   viewBox="0 0 120 28"
+    //   xmlns="./favicon.ico"
+    //   {...props}
+    // ></svg>
+    <Image src="kl small logo clear.png" w="8"></Image>
   )
 }
 
@@ -56,8 +58,8 @@ const SocialButton = ({
 export default function Footer() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}
+      bg={useColorModeValue('#880000', 'gray.900')}
+      color={useColorModeValue('white', 'gray.200')}
     >
       <Container
         as={Stack}
