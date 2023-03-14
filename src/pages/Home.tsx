@@ -17,14 +17,18 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
 export default function HomePage() {
   return (
-    <Container maxW={'7xl'} h="100vh">
+    <Container maxW={'7xl'}>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 5, md: 14 }}
         direction={{ base: 'column', md: 'row' }}
       >
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+        <Stack
+          flex={1}
+          spacing={{ base: 5, md: 10 }}
+          margin={{ sm: 1, md: 5, lg: 20 }}
+        >
           <Heading
             lineHeight={1.1}
             fontWeight={600}
@@ -57,28 +61,6 @@ export default function HomePage() {
               Working as an Accountant at Redshift Ltd
             </Text>
           </div>
-          <Box>
-            <Link px={2} href="https://github.com/leungkienan" isExternal>
-              <Icon
-                aria-label="Open GitHub"
-                bg="none"
-                boxSize={'10'}
-                as={AiFillGithub}
-              ></Icon>
-            </Link>
-            <Link
-              px={2}
-              href="https://www.linkedin.com/in/kienan-leung"
-              isExternal
-            >
-              <Icon
-                aria-label="Open LinkedIn"
-                bg="none"
-                boxSize={'10'}
-                as={AiFillLinkedin}
-              ></Icon>
-            </Link>
-          </Box>
         </Stack>
         <Flex
           flex={1}
@@ -105,6 +87,51 @@ export default function HomePage() {
             />
           </Box>
         </Flex>
+      </Stack>
+      <Stack
+        align={'center'}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 5, md: 14 }}
+        direction={{ base: 'column', md: 'row' }}
+      >
+        <Stack
+          flex={1}
+          spacing={{ base: 5, md: 10 }}
+          margin={{ sm: 1, md: 5, lg: 20 }}
+        >
+          <Heading
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
+          >
+            <Text
+              as={'span'}
+              position={'relative'}
+              m="auto"
+              _after={{
+                content: "''",
+                width: 'full',
+                height: '30%',
+                position: 'absolute',
+                bottom: 1,
+                left: 0,
+                zIndex: -1,
+              }}
+            >
+              About me
+            </Text>
+            <br />
+          </Heading>
+          <div>
+            <Text justifyContent={'center'} color={'gray.900'}>
+              nothing
+            </Text>
+            <Text color={'gray.900'}>A 25 Year Old Fullstack Developer </Text>
+            <Text color={'gray.900'}>
+              Working as an Accountant at Redshift Ltd
+            </Text>
+          </div>
+        </Stack>
       </Stack>
     </Container>
   )

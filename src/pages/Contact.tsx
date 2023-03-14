@@ -33,8 +33,8 @@ export default function Contact() {
             <br />
           </Heading>
           <div>
-            <Text color={'gray.500'}>Checkout my Socials</Text>
-            <Text color={'gray.500'}>or Email me here: </Text>
+            <Text color={'gray.500'}>Get in touch via my socials</Text>
+            <Text color={'gray.500'}>Email form TBA</Text>
           </div>
         </Stack>
       </Stack>

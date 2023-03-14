@@ -20,7 +20,7 @@ const projectList = [
 ]
 
 const Proj = ({ children }: { children: ReactNode }) => (
-  <Box>
+  <Box key={children} my="5">
     <Heading>{children.name}</Heading>
     <Text>{children.desc}</Text>
     <Text>{children.link}</Text>
