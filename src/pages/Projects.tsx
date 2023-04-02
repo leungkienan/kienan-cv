@@ -37,11 +37,12 @@ export default function Projects() {
           margin="15px auto"
           align="left"
           border={'none'}
+          position={'relative'}
         >
           <CardHeader>
             <Heading size="2xl">Projects</Heading>
           </CardHeader>
-          <CardBody textAlign="left">
+          <CardBody textAlign="left" position={'relative'}>
             {projectList.map((stuff) => (
               <Proj>{stuff}</Proj>
             ))}

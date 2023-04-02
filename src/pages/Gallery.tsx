@@ -18,24 +18,25 @@ export default function Gallery() {
     imgGallery.push(i)
   }
   return (
-    <Box p={4} height="100vh">
-      <Heading alignItems="center" p="4" display="flex">
-        <Center m="auto" p="5">
+    <Center>
+      <Box p={4} height="100vh" maxW={'4xl'} margin="15px auto">
+        <Heading alignItems="center" p="4" display="flex">
           <Icon p="1" as={BsFillCameraFill} alignItems="center"></Icon>
-          <Text>Olympus XA</Text>
-        </Center>
-      </Heading>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5}>
-        {imgGallery.map((fileName) => (
-          <Image
-            borderRadius={'10px'}
-            // border={'solid'}
-            key={fileName}
-            src={'./gallery/' + fileName + '.jpg'}
-            alt="ok"
-          ></Image>
-        ))}
-      </SimpleGrid>
-    </Box>
+          <Heading size="2xl">Olympus XA</Heading>
+        </Heading>
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={5}>
+          {imgGallery.map((fileName) => (
+            <Image
+              borderRadius={'10px'}
+              // border={'solid'}
+              key={fileName}
+              src={'./gallery/' + fileName + '.jpg'}
+              alt="ok"
+              position={'relative'}
+            ></Image>
+          ))}
+        </SimpleGrid>
+      </Box>
+    </Center>
   )
 }

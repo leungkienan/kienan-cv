@@ -11,16 +11,11 @@ import {
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 import { ReactNode } from 'react'
 
+const d = new Date()
+let year = d.getFullYear()
+
 const Logo = (props: any) => {
-  return (
-    // <svg
-    //   height={32}
-    //   viewBox="0 0 120 28"
-    //   xmlns="./favicon.ico"
-    //   {...props}
-    // ></svg>
-    <Image src="kl small logo clear.png" w="8"></Image>
-  )
+  return <Image src="kl small logo clear.png" w="8"></Image>
 }
 
 const SocialButton = ({
@@ -60,6 +55,7 @@ export default function Footer() {
     <Box
       bg={useColorModeValue('#880000', 'gray.900')}
       color={useColorModeValue('white', 'gray.200')}
+      margin="auto"
     >
       <Container
         as={Stack}
@@ -69,9 +65,10 @@ export default function Footer() {
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}
+        position="relative"
       >
         <Logo />
-        <Text>© 2023 Kienan Leung CV. All rights reserved</Text>
+        <Text>© {year} Kienan Leung CV. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
           <SocialButton
             label="LinkedIn"
